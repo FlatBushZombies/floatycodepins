@@ -27,9 +27,9 @@ const socials = [
     <footer>
         <div className='container py-10'>
             <div className='flex w-full max-md:flex-col '>
-                <div className='small-compact flex flex-1 flex-wrap items-center justify-center gap-4'>
-                    <p> Floaty Code Pins , 2025</p>
-                </div>
+            <div className="container mx-auto px-4 text-center text-muted-foreground">
+          <p>&copy; 2025 Floaty Code Pins. All rights reserved.</p>
+        </div>
                 <ul className='flex flex-1 justify-center gap-3 max-md:mt-10 md:judtify-end '>
                     {socials.map(({id, url, icon, title}) => (
                         <li key={id}>

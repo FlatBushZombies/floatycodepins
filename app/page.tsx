@@ -5,27 +5,26 @@ import { ArrowRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
-export default function Component() {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      <main className="container mx-auto px-4 py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Home</h1>
-          <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 max-w-6xl mx-auto">
-          <Card className="group relative overflow-hidden border-none">
+    <>
+    <section className='black_container'>
+          <h1 className='heading'>Elevating Your Software Experience</h1>
+    </section>
+    <section className="section_container">
+    <div className="min-h-screen bg-background w-full">
+      <main className="container mx-auto px-4 py-4">
+        <div className="grid gap-6  card_grid">
+          <Card className="group relative overflow-hidden border-none w-full">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-500/30 z-10" />
             <CardHeader className="relative z-20">
               <CardTitle className="text-2xl md:text-3xl">FCP</CardTitle>
             </CardHeader>
             <CardContent className="relative z-20 space-y-4">
-              <div className="relative h-[300px] overflow-hidden rounded-lg">
+            <div className="relative h-[30px] overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="iOS 18 developer preview showing new features and interfaces"
+                  src="/hero.png"
+                  alt="icon"
                   layout="fill"
                   objectFit="cover"
                   className="group-hover:scale-105 transition-transform duration-300"
@@ -45,16 +44,16 @@ export default function Component() {
             </CardFooter>
           </Card>
 
-          <Card className="group relative overflow-hidden border-none">
+          <Card className="group relative overflow-hidden border-none w-full">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-purple-500/30 z-10" />
             <CardHeader className="relative z-20">
               <CardTitle className="text-2xl md:text-3xl">vision</CardTitle>
             </CardHeader>
             <CardContent className="relative z-20 space-y-4">
-              <div className="relative h-[300px] overflow-hidden rounded-lg">
+            <div className="relative h-[30px] overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="visionOS 2 spatial computing interface demonstration"
+                  src="/hero.png"
+                  alt="icon"
                   layout="fill"
                   objectFit="cover"
                   className="group-hover:scale-105 transition-transform duration-300"
@@ -72,16 +71,16 @@ export default function Component() {
             </CardFooter>
           </Card>
 
-          <Card className="group relative overflow-hidden border-none">
+          <Card className="group relative overflow-hidden border-none w-full">
             <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-500/30 z-10" />
             <CardHeader className="relative z-20">
               <CardTitle className="text-2xl md:text-3xl">Company Policy</CardTitle>
             </CardHeader>
             <CardContent className="relative z-20 space-y-4">
-              <div className="relative h-[300px] overflow-hidden rounded-lg">
+            <div className="relative h-[30px] overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="Development environment and tools interface"
+                  src="/hero.png"
+                  alt="icon"
                   layout="fill"
                   objectFit="cover"
                   className="group-hover:scale-105 transition-transform duration-300"
@@ -100,16 +99,16 @@ export default function Component() {
             </CardFooter>
           </Card>
 
-          <Card className="group relative overflow-hidden border-none">
+          <Card className="group relative overflow-hidden border-none w-full">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-orange-500/30 z-10" />
             <CardHeader className="relative z-20">
               <CardTitle className="text-2xl md:text-3xl">Mission</CardTitle>
             </CardHeader>
             <CardContent className="relative z-20 space-y-4">
-              <div className="relative h-[300px] overflow-hidden rounded-lg">
+            <div className=" relative h-[30px] overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="Documentation and API reference materials"
+                  src="/hero.png"
+                  alt="icon"
                   layout="fill"
                   objectFit="cover"
                   className="group-hover:scale-105 transition-transform duration-300"
@@ -130,5 +129,7 @@ export default function Component() {
         </div>
       </main>
     </div>
+    </section>
+  </>
   )
 }

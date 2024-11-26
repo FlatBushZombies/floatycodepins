@@ -1,13 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 @layer base {
   :root {
     --radius: 0.5rem;
   }
 }
+
+@layer utilities {
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .black_container {
+    @apply w-full bg-primary min-h-[230px] pattern flex justify-center items-center flex-col py-10 px-6;
+  }
+
+
+  .heading {
+    @apply uppercase bg-black px-6 py-3 font-work-sans font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5;
+  }
+
+  .sub-heading {
+    @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
+  }
+
+
+  .card_grid {
+    @apply grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-2 min-h-[80px];
+  }
+
+  .card_grid-sm {
+    @apply grid sm:grid-cols-2 gap-5;
+  }
+
+  .no-result {
+    @apply text-black-100 text-sm font-normal;
+  }
+
+ .section_container {
+  @apply px-4 py-10 max-w-full sm:px-8 md:px-16 lg:px-16 max-w-7xl mx-auto;
+}
+
+  /* searchform */
+  .search-form {
+    @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+  }
+
+  .search-input {
+    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
+  }
+
+  .search-btn {
+    @apply size-[50px] rounded-full bg-black flex justify-center items-center !important;
+  }
+
+  /* mobile navigation */
+
+  .mobile-header {
+    @apply flex h-[60px] justify-between px-5 sm:hidden !important;
+  }
+ 
+  .mobile-nav {
+    @apply  flex-1 gap-1 text-black !important;
+  }
+  .mobile-nav-list {
+    @apply flex flex-1 flex-col gap-4 !important;
+  }
+  .mobile-nav-item {
+    @apply flex text-black-100 gap-4 w-full justify-start items-center px-6 h-[52px] rounded-full !important;
+  }
+  .nav-icon {
+    @apply w-6 filter invert opacity-25 !important;
+  }
+
+  .nav-icon-active {
+    @apply invert-0 opacity-100 !important;
+  }
+
+  .shad-active {
+    @apply bg-primary text-white shadow-drop-2 !important;
+  }
+
+
+  /* blockcard */
+  .block-card {
+    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+  }
+
+  .block-card_date {
+    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full group-hover:bg-white-100;
+  }
+
+  .block-card_desc {
+    @apply font-normal text-[16px] line-clamp-2 my-3 text-black-100 break-all;
+  }
+
+  .block-card_img {
+    @apply w-full h-[164px] rounded-[10px] object-cover;
+  }
+
+  .block-card_btn {
+    @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3 !important;
+  }
+
+  .block-card_skeleton {
+    @apply w-full h-96 rounded-[22px] bg-zinc-400;
+  }
+
+  /* startupform */
+  .contact-form {
+    @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
+  }
+
+  .contact-form_label {
+    @apply font-bold text-[18px] text-black uppercase;
+  }
+
+  .contact-form_input {
+    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300 !important;
+  }
+
+  .contact-form_textarea {
+    @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-3 placeholder:text-black-300 !important;
+  }
+
+  .contact-form_error {
+    @apply text-red-500 mt-2 ml-5;
+  }
+
+  .contact-form_editor {
+    @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black-300 !important;
+  }
+
+  .contact-form_btn {
+    @apply bg-primary border-[4px] border-black rounded-full p-5 min-h-[70px] w-full font-bold text-[18px] !important;
+  }
+
+/* Home Styles */
+
+.container {
+  @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+}
+
+.caption {
+  @apply small-2 mb-5 uppercase text-white;
+}
+.small-2 {
+  @apply text-[12px] font-bold leading-[16px] tracking-[0.3em];
+}
+
+.body-1 {
+  @apply text-[22px] leading-[36px];
+}
+  .pattern {
+    background-image: linear-gradient(
+            to right,
+            transparent 49.5%,
+            rgba(251, 232, 67, 0.2) 49.5%,
+            rgba(251, 232, 67, 0.6) 50.5%,
+            transparent 50.5%
+    );
+    background-size: 5% 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+  }
+
+/* Footer Styles */
+
+.container {
+  @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+}
+
+.small-compact {
+  @apply text-[12px] font-semibold leading-[18px] tracking-[0.03em];
+}
+
+.social-icon {
+  @apply flex size-10 items-center justify-center rounded-full border-2 border-s4/25 bg-s1/5 transition-all duration-500 hover:border-s4;
+}
+
+
+}
+

@@ -5,14 +5,64 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
+import { cn } from '@/lib/utils'
+
+import { usePathname } from 'next/navigation'
+
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
+import { Menu } from 'lucide-react'
+import Link from 'next/link'
+import { navItems } from '@/constants'
+
+
 
 export default function AboutUs() {
+
+  const pathname = usePathname();
+  
   return (
+    <>
+          <section className="w-full bg-primary min-h-[5px] justify-between py-5 px-3">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>
+                  <Image
+                  src="/logo-nobg.png"
+                  alt='logo'
+                  width={35}
+                  height={35}
+                  className='object-contain'/>
+                  Floaty Code Pins &copy;
+                </SheetTitle>
+              </SheetHeader>
+              <div className="grid gap-4 py-4">
+              <Button variant="ghost"> <Link href="/">Home</Link></Button>
+          <Button variant="ghost"><Link href="/portfolio">Portfolio</Link></Button>
+          <Button variant="ghost"><Link href="/contact">Contact</Link></Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+    </section>
+    <section className='black_container'>
+        <h1 className='heading'>About Us</h1>
+    </section>
+    <section>
     <div className="min-h-screen bg-background text-foreground">
       <header className="bg-primary text-primary-foreground py-6 sticky top-0 z-10">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold"> <a href="/">Floaty Code Pins</a></h1>
-        </div>
       </header>
 
       <main className="container mx-auto px-4 py-12">
@@ -114,12 +164,8 @@ export default function AboutUs() {
           </CardContent>
         </Card>
       </main>
-
-      <footer className="bg-muted py-6 mt-12">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2025 Floaty Code Pins. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
+    </section>
+    </>
   )
 }

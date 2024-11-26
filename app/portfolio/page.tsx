@@ -16,6 +16,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+import Link from 'next/link'
+
 const projects = [
   {
     title: "E-commerce Platform",
@@ -59,7 +61,7 @@ interface FloatyProps {
 const FloatingCodePin = ({ children, delay = 0 }: FloatyProps) => {
   return (
     <div 
-      className="absolute animate-float"
+      className="absolute animate-float text-white"
       style={{
         animation: `float 3s ease-in-out infinite ${delay}s`,
       }}
@@ -89,23 +91,23 @@ export default function Portfolio() {
       <header className="bg-primary text-primary-foreground py-6 sticky top-0 z-10">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="relative">
-            <h1 className="text-3xl font-bold"><a href="/">Floaty </a></h1>
+            <h1 className="heading"><a href="/">Portfolio </a></h1>
             {mounted && (
               <>
                 <FloatingCodePin delay={0}>Code Pins</FloatingCodePin>
-                <div className="absolute -top-4 -right-12">
+                <div className="absolute -top-4 -right-12 text-white">
                   <FloatingCodePin delay={1.5}>Tech</FloatingCodePin>
                 </div>
-                <div className="absolute top-8 -right-8">
+                <div className="absolute top-8 -right-8 text-white">
                   <FloatingCodePin delay={0.8}>Innovation</FloatingCodePin>
                 </div>
               </>
             )}
           </div>
           <nav className="hidden md:flex space-x-4">
-            <Button variant="ghost">About</Button>
-            <Button variant="ghost">Projects</Button>
-            <Button variant="ghost">Contact</Button>
+          <Button variant="ghost"> <Link href="/">Home</Link></Button>
+          <Button variant="ghost"><Link href="/about">About</Link></Button>
+          <Button variant="ghost"><Link href="/contact">Contact</Link></Button>
           </nav>
           <Sheet>
             <SheetTrigger asChild>
@@ -115,15 +117,20 @@ export default function Portfolio() {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>Navigation</SheetTitle>
-                <SheetDescription>
-                  Navigate through the site
-                </SheetDescription>
+                <SheetTitle>
+                <Image
+                  src="/logo-nobg.png"
+                  alt='logo'
+                  width={35}
+                  height={35}
+                  className='object-contain'/>
+                  Floaty Code Pins &copy;
+                </SheetTitle>
               </SheetHeader>
               <div className="grid gap-4 py-4">
-                <Button variant="ghost">About</Button>
-                <Button variant="ghost">Projects</Button>
-                <Button variant="ghost">Contact</Button>
+              <Button variant="ghost"> <Link href="/">Home</Link></Button>
+          <Button variant="ghost"><Link href="/about">About</Link></Button>
+          <Button variant="ghost"><Link href="/contact">Contact</Link></Button>
               </div>
             </SheetContent>
           </Sheet>
@@ -157,18 +164,18 @@ export default function Portfolio() {
             <CardContent>
               <div className="flex flex-col md:flex-row items-center gap-6">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/logo-nobg.png"
                   alt="Profile"
-                  width={300}
-                  height={300}
+                  width={150}
+                  height={150}
                   className="rounded-full"
                 />
                 <div>
                   <p className="text-lg mb-4">
-                    Hi, I'm a passionate full-stack developer with expertise in building scalable web applications and data-driven solutions. With a background in computer science and years of industry experience, I bring creativity and technical prowess to every project.
+                    We're passionate full-stack developer with expertise in building scalable web applications and data-driven solutions. With a background in computer science and years of industry experience, we bring creativity and technical prowess to every project.
                   </p>
                   <p className="text-lg">
-                    My portfolio showcases a range of projects that demonstrate my skills in front-end and back-end development, as well as my ability to work with cutting-edge technologies.
+                    Our portfolio showcases a range of projects that demonstrate our skills in front-end and back-end development, as well as my ability to work with cutting-edge technologies.
                   </p>
                 </div>
               </div>
@@ -218,12 +225,6 @@ export default function Portfolio() {
           </div>
         </section>
       </main>
-
-      <footer className="bg-muted py-6 mt-12">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2025 Floaty Code Pins. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   )
 }
