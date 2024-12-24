@@ -32,11 +32,14 @@ export default function AboutUs() {
     <>
           <section className="w-full bg-primary min-h-[5px] justify-between py-5 px-3">
           <Sheet>
+          <div className="absolute top-4 right-4">
+      
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
+            </div>
             <SheetContent>
               <SheetHeader>
                 <SheetTitle>
@@ -66,25 +69,35 @@ export default function AboutUs() {
       </header>
 
       <main className="container mx-auto px-4 py-12">
+        <div className='container'>
+          <div className='relative flex md:flex-wrap flex-nowrap border-2 border-s3 rounded-7xl md:overflow-hiddenmax-md:flex-col
+          feature-after md:g7 '>
         <Card className="mb-12">
           <CardHeader>
             <CardTitle className="text-3xl">About Us</CardTitle>
-            <CardDescription>Innovating through software and data</CardDescription>
+            <CardDescription>Modernising business through futuristic software</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-lg mb-4">
-              Floaty Code Pins is at the forefront of technological innovation, specializing in cutting-edge software development and advanced data analytics. Our team of expert developers and data scientists is dedicated to delivering high-quality, tailored solutions that meet the unique needs of our clients.
+              A softare development agency owned by Developers specialising in Web Development, Automation, Data Science, Mobile App Development, web3.0 Development
             </p>
             <p className="text-lg">
-              Our mission is to empower businesses with technology-driven insights and robust software solutions that drive growth, efficiency, and success in the digital age.
+              At Floaty Code Pins, we are focused on helping you evolve your business, ideas and visions 
+              to reach your targeted audience through the creation of engaging, compleling and high quality applications from scratch.
             </p>
           </CardContent>
         </Card>
-
-        <Tabs defaultValue="services" className="mb-12">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="services">Our Services</TabsTrigger>
-            <TabsTrigger value="team">Our Team</TabsTrigger>
+        </div>
+        </div>
+        <section>
+          <div className='container'>
+            <div className='max-w-960 border-2 border-red-500 mt-6'>
+              <h1>Meet Our Team</h1>
+            <Tabs defaultValue="services" className="mb-12">
+          <TabsList className='relative z-4 mx-auto flex w-[375px] rounded-3xl border-[3px]border-s4/25 bg-s1/50 p-2 backdrop-blur-[6px]
+            max-w-md:w-[310px]'>
+            <TabsTrigger value="services" className='tabs-head_btn z-2'>Our Services</TabsTrigger>
+            <TabsTrigger value="team" className='tabs-head_btn'>Our Team</TabsTrigger>
           </TabsList>
           <TabsContent value="services">
             <Card>
@@ -153,6 +166,10 @@ export default function AboutUs() {
             </Card>
           </TabsContent>
         </Tabs>
+            </div>
+          </div>
+
+        </section>
 
         <Card>
           <CardHeader>

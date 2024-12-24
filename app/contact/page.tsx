@@ -24,11 +24,13 @@ const ContactForm = () => {
     <>
         <section className="w-full bg-primary min-h-[5px] justify-end py-5 px-3">
             <Sheet>
+            <div className="absolute top-4 right-4">
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden ">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
+            </div>
             <SheetContent>
               <SheetHeader>
                 <SheetTitle>

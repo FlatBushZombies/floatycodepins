@@ -29,9 +29,38 @@ const config: Config = {
 					"100": "#F7F7F7",
 					DEFAULT: "#FFFFFF",
 				},
+				blue: {
+					"50": "#DFDFF0",
+					"75": "#DFDFF2",
+					"100": "#F0F2FA",
+					"200": "#010101",
+					"300": "#4FB7DD",
+				}, 
+				violet: {
+					300: '#5724FF'
+				},
+				yellow: {
+					100: "#8E983F",
+					300: "#EDFF66"
+				},
+				p1: '#2EF2FF',
+				p2: '#3C52D9',
+				p3: '#C8EA80',
+				p4: '#EAEDFF',
+				p5: '#C4CBF5',
+				s1: '#080D27',
+				s2: '#0C1838',
+				s3: '#334679',
+				s4: '#1959AD',
+				s5: '#263466',
 			},
 			fontFamily: {
 				"work-sans": ["var(--font-work-sans)"],
+				zentry: ['zentry', 'sanf-serif'],
+				general: ['general', 'sanf-serif'],
+				'circular-web': ['circular-web', 'sanf-serif'],
+				'robert-medium': ['robert-medium', 'sanf-serif'],
+				'robert-regular': ['robert-regular', 'sanf-serif'],
 			},
 			borderRadius: {
 				lg: "var(--radius)",
